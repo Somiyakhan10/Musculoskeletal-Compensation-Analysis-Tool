@@ -138,7 +138,7 @@ These findings provide a foundation for further studies in:
 
 Biomechanics Researcher | Musculoskeletal Modeling
 
-- **GitHub:** [github.com/somiya-khan01](https://github.com/somiya-khan01)
+
 
 
 
