@@ -17,13 +17,6 @@ By [Somiya Khan]
 - [Screenshots](#screenshots)
 - [Model Performance](#model-performance)
 - [Dataset / Model Information](#dataset--model-information)
-- [How It Works](#how-it-works)
-- [Technology Stack](#technology-stack)
-- [Installation](#installation)
-- [Project Structure](#project-structure)
-- [API Reference](#api-reference)
-- [Author](#author)
-- [License](#license)
 
 ---
 
