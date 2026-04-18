@@ -1,12 +1,13 @@
-# MuscleComp — Musculoskeletal Compensation Analysis Tool
+# 🦴 MuscleComp — Musculoskeletal Compensation Analysis Study
 
-**Quantifying Compensatory Muscle Activation in Simulated Gait Pathology**
+**Quantitative Analysis of Muscle Activation Changes Under Simulated Knee Weakness**
 
-By [Somiya Khan]
+**By Somiya Khan**
 
 ---
 
-**⚠️ Academic Disclaimer:** This simulation is a computational model and does not represent real patient data. Results should be interpreted within the context of model limitations.
+⚠️ **Academic Disclaimer:**
+This project is a computational simulation using a musculoskeletal model in OpenSim. It does not represent real patient data, and results should be interpreted within the limitations of the modeling framework.
 
 ---
 
@@ -17,26 +18,35 @@ By [Somiya Khan]
 - [Screenshots](#screenshots)
 - [Model Performance](#model-performance)
 - [Dataset / Model Information](#dataset--model-information)
+- [Muscles Analyzed](#muscles-analyzed)
+- [Conclusion](#conclusion)
+- [Future Work](#future-work)
 
 ---
 
 ## 🔬 Overview
 
-**MuscleComp** is a computational biomechanics project that investigates how the human neuromuscular system compensates when a major lower extremity muscle is weakened during gait.
+**MuscleComp** is a computational biomechanics study that investigates how the musculoskeletal system adapts when a key lower extremity muscle is weakened.
 
-Using **OpenSim 4.6** musculoskeletal simulation software, we created healthy and pathological gait models and performed **Static Optimization** to estimate muscle forces. The key finding reveals a **distal-to-proximal compensation strategy** where the Soleus muscle increases activation by **67.8%** when the Rectus Femoris is weakened.
+Using **OpenSim 4.6**, a healthy model and a weakened model were developed by reducing the maximum isometric force of the Rectus Femoris by 50%. **Static Optimization** was then used to estimate muscle forces under both conditions.
+
+The analysis focuses on identifying changes in muscle force distribution and observing trends in compensatory muscle activation.
 
 ---
 
 ## 📊 Key Findings
 
-| Finding | Value |
-|---------|-------|
-| **Soleus compensation** | +67.8% increase (p < 0.01) |
-| **Vastus Medialis compensation** | +27.5% increase (p < 0.01) |
-| **Tibialis Anterior compensation** | +25.6% increase (p < 0.05) |
-| **Compensation strategy** | Distal-to-proximal |
-| **Statistical significance** | 3 muscles with p < 0.05 |
+| Observation | Result |
+|-------------|--------|
+| **Soleus force change** | +67.8% |
+| **Vastus Medialis force change** | +27.5% |
+| **Tibialis Anterior force change** | +25.6% |
+| **Rectus Femoris change** | +10.0% |
+| **Semitendinosus change** | -0.3% |
+
+👉 Results indicate increased contribution from certain muscles (particularly Soleus), suggesting compensatory activation behavior in response to reduced Rectus Femoris strength.
+
+> ⚠️ Note: These values are derived from a single simulation and are presented as relative differences.
 
 ---
 
@@ -59,23 +69,21 @@ Using **OpenSim 4.6** musculoskeletal simulation software, we created healthy an
 
 | Metric | Value |
 |--------|-------|
-| **Primary compensator identified** | Soleus |
-| **Maximum compensation magnitude** | 67.8% |
-| **Statistically significant muscles** | 3/5 (p < 0.05) |
-| **Muscles analyzed** | 5 major lower extremity muscles |
-| **Gait cycle duration** | 1.0 second (100% cycle) |
+| **Primary observed compensator** | Soleus |
+| **Maximum observed change** | 67.8% |
+| **Muscles analyzed** | 5 lower extremity muscles |
+| **Simulation type** | Static Optimization |
+| **Simulation cases** | 2 (Healthy, Weakened) |
 
 ### Compensation Summary Table
 
-| Muscle | Healthy (N/kg) | Weakened (N/kg) | Δ (%) | p-value |
-|--------|---------------|-----------------|-------|---------|
-| **Soleus** | 0.143 | 0.240 | **+67.8%** | 0.003 *** |
-| Vastus Medialis | 0.207 | 0.264 | +27.5% | 0.008 *** |
-| Tibialis Anterior | 0.550 | 0.691 | +25.6% | 0.012 ** |
-| Rectus Femoris | 0.909 | 1.000 | +10.0% | 0.089 |
-| Semitendinosus | 0.792 | 0.790 | -0.3% | 0.782 |
-
-***p < 0.01, **p < 0.05*
+| Muscle | Healthy (N/kg) | Weakened (N/kg) | Δ (%) |
+|--------|---------------|-----------------|-------|
+| **Soleus** | 0.143 | 0.240 | **+67.8%** |
+| Vastus Medialis | 0.207 | 0.264 | +27.5% |
+| Tibialis Anterior | 0.550 | 0.691 | +25.6% |
+| Rectus Femoris | 0.909 | 1.000 | +10.0% |
+| Semitendinosus | 0.792 | 0.790 | -0.3% |
 
 ---
 
@@ -87,19 +95,63 @@ Using **OpenSim 4.6** musculoskeletal simulation software, we created healthy an
 | **Software** | OpenSim 4.6 |
 | **Muscle Model** | Thelen2003Muscle |
 | **Analysis Tool** | Static Optimization |
-| **Total Simulations** | 2 (Healthy, Weakened) |
+| **Simulation Cases** | Healthy vs Weakened |
 | **Muscles Analyzed** | 5 lower extremity muscles |
-| **Gait Condition** | Normal walking |
-
-### Muscles Analyzed
-
-| Muscle | Function | Original Force (N) | Weakened Force (N) |
-|--------|----------|-------------------|-------------------|
-| Rectus Femoris | Knee extensor / Hip flexor | 585 | 292 (50% ↓) |
-| Soleus | Ankle plantarflexor | 1558 | 1558 (unchanged) |
-| Vastus Medialis | Knee extensor | 647 | 647 (unchanged) |
-| Tibialis Anterior | Ankle dorsiflexor | 905 | 905 (unchanged) |
-| Semitendinosus | Knee flexor | 410 | 410 (unchanged) |
 
 ---
+
+## 💪 Muscles Analyzed
+
+| Muscle | Function | Original Force (N) | Modified Force (N) |
+|--------|----------|-------------------|-------------------|
+| Rectus Femoris | Knee extensor / Hip flexor | 585 | 292 (50% reduction) |
+| Soleus | Ankle plantarflexor | 1558 | 1558 |
+| Vastus Medialis | Knee extensor | 647 | 647 |
+| Tibialis Anterior | Ankle dorsiflexor | 905 | 905 |
+| Semitendinosus | Knee flexor | 410 | 410 |
+
+---
+
+## 🧠 Conclusion
+
+This study demonstrates how reducing the strength of a key muscle can alter force distribution across other muscles in the system. The observed increases in specific muscles highlight how the musculoskeletal model adapts under simulated weakness conditions.
+
+These findings provide a foundation for further studies in:
+- Rehabilitation biomechanics
+- Muscle coordination analysis
+- Assistive device simulation (future work)
+
+---
+
+## 🚀 Future Work
+
+- Introduce assistive torque (exoskeleton simulation)
+- Expand analysis to additional muscles and joints
+- Incorporate multiple simulation trials for statistical analysis
+- Explore energy expenditure and joint loading
+
+---
+
+## 👩‍🔬 Author
+
+**Somiya Khan**
+
+Biomechanics Researcher | Musculoskeletal Modeling
+
+- **GitHub:** [github.com/somiya-khan01](https://github.com/somiya-khan01)
+
+
+
+
+---
+
+**Built with OpenSim 4.6**
+
+⭐ If you find this project useful, please consider giving it a star!
+
+---
+
+
+
+
 
