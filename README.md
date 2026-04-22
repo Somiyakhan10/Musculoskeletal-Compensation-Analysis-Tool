@@ -54,7 +54,8 @@ The analysis focuses on identifying changes in muscle force distribution and obs
 
 
 ### Weak Model
-<img width="1916" height="757" alt="image" src="https://github.com/user-attachments/assets/2724ed0c-52c3-4115-ab37-17e2ac143bdd" />
+<img width="767" height="830" alt="image" src="https://github.com/user-attachments/assets/e1dd2d97-599c-4ce7-a605-3e792e6c88be" />
+
 
 
 ### Muscle Force Comparison
@@ -63,7 +64,7 @@ The analysis focuses on identifying changes in muscle force distribution and obs
 
 ### Percent Change Visualization
 
-<img width="653" height="472" alt="image" src="https://github.com/user-attachments/assets/357d920d-0c8b-45c0-aebc-a40ca485173b" />
+<img width="767" height="472" alt="image" src="https://github.com/user-attachments/assets/357d920d-0c8b-45c0-aebc-a40ca485173b" />
 
 
 
