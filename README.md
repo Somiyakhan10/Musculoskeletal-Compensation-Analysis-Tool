@@ -52,6 +52,11 @@ The analysis focuses on identifying changes in muscle force distribution and obs
 
 ## 📸 Screenshots
 
+
+### Weak Model
+<img width="1916" height="757" alt="image" src="https://github.com/user-attachments/assets/2724ed0c-52c3-4115-ab37-17e2ac143bdd" />
+
+
 ### Muscle Force Comparison
 <img width="767" height="477" alt="image" src="https://github.com/user-attachments/assets/dfeab50c-5de8-4fd0-aa2d-f3ca4dc7ce04" />
 
